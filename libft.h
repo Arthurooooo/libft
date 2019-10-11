@@ -6,7 +6,7 @@
 /*   By: argonthi <argonthi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/28 17:37:35 by argonthi          #+#    #+#             */
-/*   Updated: 2018/12/03 22:59:21 by argonthi         ###   ########.fr       */
+/*   Updated: 2019/10/04 00:42:39 by argonthi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,13 @@
 # include <unistd.h>
 # include <stdint.h>
 # include <string.h>
+# include "get_next_line.h"
+typedef struct  s_list
+{
+    void    *content;
+    size_t  content_size;
+    struct s_list *next;
+}               t_list;
 
 void	*ft_memset(void *b, int c, size_t len);
 void	ft_bzero(void *s, size_t n);
@@ -43,6 +50,7 @@ char	*ft_strrchr(const char *s, int c);
 int		ft_atoi(const char *str);
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
+int     ft_isnumber(char *c);
 int		ft_isalnum(int c);
 int		ft_isascii(int c);
 int		ft_isprint(int c);
@@ -72,4 +80,6 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char const *s, int fd);
 void	ft_putendl_fd(char const *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
+int     get_next_line(const int fd, char **line);
+
 #endif
