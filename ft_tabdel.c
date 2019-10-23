@@ -1,32 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isnumber.c                                      :+:      :+:    :+:   */
+/*   ft_tabdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: argonthi <argonthi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/04 00:25:51 by argonthi          #+#    #+#             */
-/*   Updated: 2019/10/21 06:02:40 by argonthi         ###   ########.fr       */
+/*   Created: 2019/10/21 01:26:44 by argonthi          #+#    #+#             */
+/*   Updated: 2019/10/21 02:57:07 by argonthi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isnumber(char *c)
+void	ft_tabdel(char **as)
 {
 	int i;
 
 	i = 0;
-	if (c[i] == '-')
-		i++;
-	if (c[i] <= '0' && c[i] >= '9')
-		return (0);
-	else
+	if (!as)
+		return ;
+	while (as[i])
 	{
-		while (c[i++] >= '0' && c[i++] <= '9')
-			i++;
-		if (c[i++])
-			return (0);
+		ft_strdel(&as[i]);
+		i++;
 	}
-	return (1);
+	ft_memdel((void*)&as);
 }

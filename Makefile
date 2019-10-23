@@ -6,7 +6,7 @@
 #    By: argonthi <argonthi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/10/29 20:45:59 by argonthi          #+#    #+#              #
-#    Updated: 2019/10/04 00:43:05 by argonthi         ###   ########.fr        #
+#    Updated: 2019/10/21 01:31:58 by argonthi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,7 @@ STRING		= ft_strcat.c ft_strchr.c ft_strcjoin.c ft_strclr.c ft_strcmp.c\
 			  ft_striter.c ft_striteri.c ft_strjoin.c ft_strlcat.c ft_strlen.c\
 			  ft_strmap.c ft_strmapi.c ft_strncat.c ft_strncmp.c ft_strncpy.c\
 			  ft_strnequ.c ft_strnew.c ft_strnstr.c ft_strrchr.c ft_strsplit.c\
-			  ft_strstr.c ft_strsub.c ft_strtrim.c
+			  ft_strstr.c ft_strsub.c ft_strtrim.c ft_tablen.c ft_tabdel.c
 CHAR		= ft_tolower.c ft_toupper.c
 
 FUNCTIONS	= $(IS) $(STRUCT) $(MEMORY) $(NUMBER) $(PRINT) $(STRING) $(CHAR)
